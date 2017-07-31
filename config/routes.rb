@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'shared_lists/show'
+
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'pages/home'
   resources :lists, only: [:index, :create, :update, :destroy]
-
+  resources :shared_lists, only: :show, param: :token
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   authenticated :user do
