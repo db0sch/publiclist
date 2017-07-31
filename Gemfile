@@ -37,6 +37,8 @@ gem "autoprefixer-rails"
 gem 'devise'
 # use Figaro for environment variables
 gem 'figaro'
+# use Wunderlist Omniauth to auth user with Wunderlist
+gem 'omniauth-wunderlist'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
