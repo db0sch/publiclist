@@ -27,5 +27,10 @@ module Publiclist
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators do |generate|
+      generate.assets false
+      generate.helper false
+    end
   end
 end
