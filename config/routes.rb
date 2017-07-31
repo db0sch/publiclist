@@ -8,12 +8,12 @@ Rails.application.routes.draw do
   end
 
   get 'pages/home'
-  get 'pages/dashboard'
+  resources :lists, only: [:index, :create, :update, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   authenticated :user do
-    root to: "pages#dashboard", as: :authenticated_root
+    root to: "lists#index", as: :authenticated_root
   end
 
   root to: "pages#home"
