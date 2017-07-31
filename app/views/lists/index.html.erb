@@ -1,5 +1,12 @@
 <h1>Your lists</h1>
 
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= list.title %> | <%= list.status %> | <%= link_to "x", list_path(list), method: :delete %></li>
+  <% end %>
+</ul>
 
-
-
+<%= simple_form_for @list do |f| %>
+  <%= f.input :list_id, collection: @lists_wunderlist, value_method: :id, label_method: :title %>
+  <%= f.submit "Publish this list" %>
+<% end %>
