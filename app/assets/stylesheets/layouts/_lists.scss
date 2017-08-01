@@ -1,22 +1,32 @@
 #sharedListHead {
-  // padding: 0 10px 0 30px;
+  height: 60px;
   background-color: white;
-  border-radius: 2px;
-  h1 {
-    margin-left: 30px;
-    font-size: 1.6em;
-  }
-
-  @media (min-width: $lg) {
+  border-radius: $border-radius-base;
+  display: flex;
+  .shared-list-title-body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 5px 30px;
     h1 {
-      margin-left: 20px;
+      font-size: 1.6em;
+      margin: 5px 0;
     }
-    margin-bottom: 5px;
+    span {
+      align-self: flex-end;
+    }
+
+    @media (min-width: $lg) {
+      padding: 5px 10px 5px 20px;
+    }
   }
 }
 
+
+
 #sharedListContent {
-  border-radius: 2px;
+  border-radius: $border-radius-base;
   ol {
     margin: 5px;
     padding: 5px;
@@ -33,4 +43,3 @@
   //   height: calc(100vh - 45px);
   // }
 }
-

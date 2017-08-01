@@ -1,11 +1,10 @@
 li.task {
   height: 47px;
   margin-bottom: 1px;
-  a.task-link {
+  a.task-body {
     background-color: white;
     outline: 0;
-    color: black;
-    border-radius: 2px;
+    border-radius: $border-radius-base;
     text-decoration: none;
     height: 100%;
     display: flex;

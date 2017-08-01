@@ -17,3 +17,29 @@ main {
     max-width: 60%;
   }
 }
+
+html *
+{
+  font-size: $font-size-base;
+  color: $font-color-base;
+  font-family: $font-family-sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  font-family: $headings-font-family;
+  color: $font-color-base;
+}
+
+.shared-list-title {
+  font-family: $font-family-sans-serif;
+}
+
+.annotation {
+  color: $font-color-light;
+  font-size: 0.8em;
+}
+
+.author {
+  @extend .annotation;
+}

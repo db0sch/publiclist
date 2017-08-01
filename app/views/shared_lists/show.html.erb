@@ -1,88 +1,22 @@
 <div id="sharedListContainer">
   <header id="sharedListHead">
-    <h1><%= @list.title %></h1>
+    <div class="shared-list-title-body">
+      <h1><%= @list.title %></h1>
+      <span class="author">by <%= @list.user.name %></span>
+    </div>
   </header>
 
   <section id="sharedListContent">
     <ol>
-      <%# @tasks.each do |task| %>
-        <!-- <li><%# task.title %></li> -->
-      <%# end %>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-            <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-            <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-            <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-            <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-            <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
-      <li class="task">
-        <%= link_to "This is super cool", '#', class: "task-link" %>
-      </li>
+      <% @tasks.each do |task| %>
+        <li class="task"><%= link_to task.title, '#', class:"task-body" %></li>
+      <% end %>
     </ol>
   </section>
   <!-- <aside id="itemContent"></aside> -->
 </div>
 
+<% content_for(:title_tag) do %>
+  <%= @list.title %> by <%= @list.user.name %> | PublicList
+<% end %>
 

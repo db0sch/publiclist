@@ -1,0 +1,14 @@
+// from https://webgradients.com/
+$gradient-012: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+$gradient-014: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+$gradient-022: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+$gradient-025: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+$gradient-032: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+$gradient-041: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+$gradient-049: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+$gradient-087: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+
+$gradient-list: $gradient-012, $gradient-014, $gradient-022, $gradient-025, $gradient-032, $gradient-041, $gradient-049, $gradient-087;
+
+$rand: random(8);
+$rand-bg-gradient: nth($gradient-list, $rand);
