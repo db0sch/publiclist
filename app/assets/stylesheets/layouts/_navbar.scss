@@ -1,18 +1,26 @@
 nav {
   height: $navbar-height;
-  display: flex;
   background: $navbar-bg-color;
   * {
     color: $navbar-text-color;
   }
+  .container {
+    height: 100%;
+  }
   .navbar-items {
+    height: 100%;
     flex: 1;
     @extend .flex-between-center;
+    a {
+      text-decoration: none;
+    }
   }
 }
 
 #navbarLogo {
+  align-self: flex-end;
+  line-height: 22px;
   font-family: $headings-font-family;
   font-weight: 800;
-  font-size: 1.2em;
+  font-size: 2em;
 }

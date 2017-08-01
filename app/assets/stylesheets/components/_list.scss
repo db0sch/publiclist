@@ -5,10 +5,11 @@
 .list {
   background-color: white;
   margin: 2px 0;
-  height: 60px;
+  min-height: 60px;
   border: 1px solid lightgrey;
   border-radius: $border-radius-base;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .list-left-body {
