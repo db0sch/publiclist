@@ -15,6 +15,8 @@ class ListsFromWunderlistService
     @lists.find {|list| list.id == list_id}
   end
 
+  private
+
   def get_lists
     @lists = @wunderlist.lists
   end

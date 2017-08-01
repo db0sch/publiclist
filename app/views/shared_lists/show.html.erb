@@ -1,3 +1,9 @@
 <h1><%= @list.title %></h1>
 <p>This is the shareable url: <%= shareable_link(@list) %></p>
 
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.title %></li>
+  <% end %>
+</ul>
+
