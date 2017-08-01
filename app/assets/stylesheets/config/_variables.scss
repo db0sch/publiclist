@@ -7,8 +7,12 @@ $font-size-base: 14px;
 // Colors
 $font-color-base: $dark-gray;
 $font-color-light: lightgrey;
+$light-border: lightgrey;
 
 // Buttons & inputs' radius
 $border-radius-base:  3px;
 
-// Override other variables below!
+// Height
+$navbar-height: 50px;
+$footer-height: 70px;
+$total-nav-footer-height: $footer-height + $navbar-height;

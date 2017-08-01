@@ -4,18 +4,9 @@ body {
 }
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - #{$total-nav-footer-height});
   display: flex;
   flex-direction: column;
-}
-
-.container {
-  max-width: 96%;
-  margin: auto;
-  // Large devices (desktops, 992px and up)
-  @media (min-width: $lg) {
-    max-width: 60%;
-  }
 }
 
 html *
@@ -42,4 +33,19 @@ h1, h2, h3, h4, h5 {
 
 .author {
   @extend .annotation;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
 }
