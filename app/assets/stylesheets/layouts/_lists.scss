@@ -1,0 +1,36 @@
+#sharedListHead {
+  // padding: 0 10px 0 30px;
+  background-color: white;
+  border-radius: 2px;
+  h1 {
+    margin-left: 30px;
+    font-size: 1.6em;
+  }
+
+  @media (min-width: $lg) {
+    h1 {
+      margin-left: 20px;
+    }
+    margin-bottom: 5px;
+  }
+}
+
+#sharedListContent {
+  border-radius: 2px;
+  ol {
+    margin: 5px;
+    padding: 5px;
+    @media (min-width: $lg) {
+      margin: 0px;
+      padding: 0px;
+    }
+    list-style: none;
+  }
+  // if I want to create a scroll inside window (for desktop version maybes)
+  // .notes-scroll {
+  //   overflow-y: auto;
+  //   overflow-x: hidden;
+  //   height: calc(100vh - 45px);
+  // }
+}
+

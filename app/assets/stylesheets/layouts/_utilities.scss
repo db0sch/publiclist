@@ -1,0 +1,19 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 96%;
+  margin: auto;
+  // Large devices (desktops, 992px and up)
+  @media (min-width: $lg) {
+    max-width: 60%;
+  }
+}

@@ -1,9 +1,88 @@
-<h1><%= @list.title %></h1>
-<p>This is the shareable url: <%= shareable_link(@list) %></p>
+<div id="sharedListContainer">
+  <header id="sharedListHead">
+    <h1><%= @list.title %></h1>
+  </header>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= task.title %></li>
-  <% end %>
-</ul>
+  <section id="sharedListContent">
+    <ol>
+      <%# @tasks.each do |task| %>
+        <!-- <li><%# task.title %></li> -->
+      <%# end %>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+            <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+            <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+            <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+            <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+            <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+      <li class="task">
+        <%= link_to "This is super cool", '#', class: "task-link" %>
+      </li>
+    </ol>
+  </section>
+  <!-- <aside id="itemContent"></aside> -->
+</div>
+
 
