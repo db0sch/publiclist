@@ -5,7 +5,7 @@ nav {
   * {
     color: $navbar-text-color;
   }
-  .container {
+  .navbar-items {
     flex: 1;
     @extend .flex-between-center;
   }

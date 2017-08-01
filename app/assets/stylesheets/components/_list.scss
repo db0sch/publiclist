@@ -1,6 +1,29 @@
 .lists {
   @extend .list-unstyled;
-  li {
-    word-break: break-all;
-  }
+}
+
+.list {
+  background-color: white;
+  margin: 2px 0;
+  height: 60px;
+  border: 1px solid lightgrey;
+  border-radius: $border-radius-base;
+  display: flex;
+}
+
+.list-left-body {
+  flex: 1 0 auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-right-body {
+  flex: 0 0 10%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

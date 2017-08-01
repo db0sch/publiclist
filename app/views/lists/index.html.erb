@@ -1,16 +1,33 @@
-<section class="container">
-
-  <h1>Your lists</h1>
-
-  <ol class="lists">
-    <% @lists.each do |list| %>
-      <li><%= list.title %> | <%= list.status %> | <%= link_to "x", list_path(list), method: :delete %> | <%= shareable_link(list) %></li>
+<section id="newListForm">
+  <div class="container flex-center">
+    <%= simple_form_for @list, html: {class: "form-inline"} do |f| %>
+      <%= f.input :list_id, collection: @lists_wunderlist, value_method: :id, label_method: :title, prompt: "Choose a list" %>
+      <%= f.submit "Share", class: "btn btn-primary" %>
     <% end %>
-  </ol>
-
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :list_id, collection: @lists_wunderlist, value_method: :id, label_method: :title %>
-    <%= f.submit "Publish this list" %>
-  <% end %>
-
+  </div>
 </section>
+
+<section id="lists">
+  <div class="container">
+    <h1>Shared lists</h1>
+
+    <ol class="lists">
+      <% @lists.each do |list| %>
+        <li class="list">
+          <div class="list-left-body">
+            <span><%= list.title %></span>
+            <div class="list-link">
+              <span>Link: </span><code><%= shareable_link(list) %></code>
+            </div>
+          </div>
+          <div class="list-right-body">
+            <%= link_to "Disable", list_path(list), method: :delete, class: "btn" %>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+
+  </div>
+</section>
+
+
