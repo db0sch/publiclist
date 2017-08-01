@@ -49,3 +49,9 @@ h1, h2, h3, h4, h5 {
   padding-right: 5px;
   padding-left: 5px;
 }
+
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

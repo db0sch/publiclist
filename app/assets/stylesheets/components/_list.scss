@@ -1,0 +1,6 @@
+.lists {
+  @extend .list-unstyled;
+  li {
+    word-break: break-all;
+  }
+}

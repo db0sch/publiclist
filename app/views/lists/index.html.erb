@@ -1,12 +1,16 @@
-<h1>Your lists</h1>
+<section class="container">
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= list.title %> | <%= list.status %> | <%= link_to "x", list_path(list), method: :delete %> | <%= shareable_link(list) %></li>
+  <h1>Your lists</h1>
+
+  <ol class="lists">
+    <% @lists.each do |list| %>
+      <li><%= list.title %> | <%= list.status %> | <%= link_to "x", list_path(list), method: :delete %> | <%= shareable_link(list) %></li>
+    <% end %>
+  </ol>
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :list_id, collection: @lists_wunderlist, value_method: :id, label_method: :title %>
+    <%= f.submit "Publish this list" %>
   <% end %>
-</ul>
 
-<%= simple_form_for @list do |f| %>
-  <%= f.input :list_id, collection: @lists_wunderlist, value_method: :id, label_method: :title %>
-  <%= f.submit "Publish this list" %>
-<% end %>
+</section>

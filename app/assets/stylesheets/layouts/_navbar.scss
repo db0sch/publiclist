@@ -1,0 +1,18 @@
+nav {
+  height: $navbar-height;
+  display: flex;
+  background: $navbar-bg-color;
+  * {
+    color: $navbar-text-color;
+  }
+  .container {
+    flex: 1;
+    @extend .flex-between-center;
+  }
+}
+
+#navbarLogo {
+  font-family: $headings-font-family;
+  font-weight: 800;
+  font-size: 1.2em;
+}
