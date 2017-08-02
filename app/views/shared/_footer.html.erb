@@ -2,9 +2,10 @@
   <section class="container">
     <span>© 2017 Dimitri Bosch</span>
     <ul class="list-unstyled list-inline">
-      <li><%= link_to "About", "#", class: "footer-link" %></li>
-      <li><%= link_to "Contact", "#", class: "footer-link" %></li>
-      <li><%= link_to "Twitter", "#", class: "footer-link" %></li>
+      <li><%= mail_to "dim@mnmlist.io", "Contact", class: "footer-link" %></li>
+      <!-- <li><%# link_to "About", "#", class: "footer-link" %></li> -->
+      <!-- <li><%# link_to "Contact", "#", class: "footer-link" %></li> -->
+      <!-- <li><%# link_to "Twitter", "#", class: "footer-link" %></li> -->
     </ul>
   </section>
 </footer>

@@ -1,1 +1,107 @@
 // Specific CSS for your home-page
+section#homepageBanner {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $lg) {
+    height: 70vh;
+  }
+}
+
+h1#homepageLogo {
+  font-weight: 800;
+  margin: 10px 0;
+  font-size: 3em;
+  color: $blue;
+  text-shadow: 6px 6px 0px $green;
+  // Large devices (desktops, 992px and up)
+  @media (min-width: $lg) {
+    font-size: 6em;
+  }
+}
+
+#tagline {
+  margin-top: 10px;
+  font-size: 1.3em;
+  font-weight: 300;
+  @media (min-width: $lg) {
+    font-size: 2em;
+  }
+}
+
+a#callToAction {
+  margin: 20px 0;
+  background-color: $blue;
+  height: 40px;
+  width: 200px;
+  display: inline-block;
+  zoom: 1;
+  line-height: 40px;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 100%;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 6px 6px 0px $green;
+  @media (min-width: $lg) {
+    width: 300px;
+    font-size: 1.3em;
+  }
+}
+
+$slide-width: 500px;
+$slide-height: 300px;
+
+
+#slider {
+  height: $slide-height;
+  width: $slide-width;
+  overflow: hidden;
+  box-shadow: inset 10px 10px 10px blue;
+}
+
+.slide {
+  width: $slide-width;
+  height: $slide-height;
+  float: left;
+  position: relative;
+}
+
+#slide-holder {
+  // wide enough to fit all the slides
+  width: 400%;
+  position: relative;
+  left: 0;
+  will-change: transform;
+  animation: scroller 10s infinite;
+}
+
+// need a step for each slide
+@keyframes scroller {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-$slide-width); }
+  66% { transform: translateX(-$slide-width*2); }
+  100% { transform: translateX(0); }
+}
+
+#homepageDescription {
+  text-align: justify;
+  margin-bottom: 80px;
+  h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+
+.example-image {
+  width: 100%;
+}

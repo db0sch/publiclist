@@ -7,6 +7,9 @@ main {
   min-height: calc(100vh - #{$total-nav-footer-height});
   display: flex;
   flex-direction: column;
+  &#sharedList {
+    min-height: 100vh;
+  }
 }
 
 html *
@@ -61,4 +64,15 @@ h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.paragraph-center {
+  display: flex;
+  align-items: center;
+  @media (min-width: $lg) {
+    justify-content: center;
+    article {
+      flex: 0 0 40%;
+    }
+  }
 }

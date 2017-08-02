@@ -1,4 +1,51 @@
-<h1>Public List</h1>
-<p>Share your Wunderlist lists with anyone.</p>
+<section id="homepageBanner">
 
-<%= link_to "Connect with Wunderlist", user_wunderlist_omniauth_authorize_path %>
+
+    <h1 id="homepageLogo">MNMLIST</h1>
+    <p id="tagline">Share your (wunder)lists with anyone.</p>
+
+  <!--   <div id="slider">
+      <div id="slide-holder">
+        <div class="slide"><%# image_tag 'screenshot_radio.png' %></div>
+        <div class="slide"><%# image_tag 'screenshot_movies.png' %></div>
+        <div class="slide"><%# image_tag 'screenshot_places.png' %></div>
+      </div>
+    </div>
+   -->
+    <%= link_to "Connect with Wunderlist", user_wunderlist_omniauth_authorize_path, id: "callToAction" %>
+
+
+
+</section>
+<section id="homepageDescription">
+  <div class="container">
+    <div class="paragraph-center">
+      <article>
+        <h2>Just three steps</h2>
+        <ol>
+          <li>Choose a list</li>
+          <li>Click on share and get the shareable url</li>
+          <li>Send the url to your friends or community</li>
+        </ol>
+      </article>
+    </div>
+  </div>
+  <div class="container">
+    <div class="paragraph-center">
+      <article class="container">
+        <p>They will see something like this:</p>
+        <%= image_tag "screenshot_movies.png", class: "example-image" %>
+      </article>
+    </div>
+  </div>
+  <div class="container">
+    <div class="paragraph-center">
+      <article>
+        <h2>More features soon...</h2>
+        <p>Sharing a list is a missing feature on Wunderlist. I hope you'll enjoy using this tool and share lots of lists with your friends. I plan to add more features, like accessing the note inside a list item, and a lists discovery...</p>
+        <p>If you have any feedback or issues, please feel free to contact me: <%= mail_to "dim@mnmlist.io" %></p>
+        <p>Here is also my twitter account: <%= link_to "@dimitribosch", "https://twitter.com/dimitribosch" %> and my github account: <%= link_to "db0sch", "https://github.com/db0sch" %></p>
+      </article>
+    </div>
+  </div>
+</section>

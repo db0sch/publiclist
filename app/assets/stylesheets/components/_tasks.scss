@@ -1,14 +1,21 @@
 li.task {
   height: 47px;
   margin-bottom: 1px;
-  a.task-body {
+  .task-body {
     background-color: white;
     outline: 0;
     border-radius: $border-radius-base;
-    text-decoration: none;
     height: 100%;
+    text-decoration: none;
     display: flex;
     align-items: center;
     padding: 0 10px 0 20px;
+    a {
+      text-decoration: none;
+      color: $blue;
+      &:before {
+        content: "\00a0";
+      }
+    }
   }
 }

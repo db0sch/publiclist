@@ -9,11 +9,12 @@
   <section id="sharedListContent">
     <ol>
       <% @tasks.each do |task| %>
-        <li class="task"><%= link_to task.title, '#', class:"task-body" %></li>
+        <li class="task"><span class="task-body">
+        <%= raw Rinku.auto_link(task.title, :all, 'target="_blank"') %>
+        </span> </li>
       <% end %>
     </ol>
   </section>
-  <!-- <aside id="itemContent"></aside> -->
 </div>
 
 <% content_for(:title_tag) do %>
