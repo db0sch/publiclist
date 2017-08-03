@@ -220,5 +220,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   wunderlist-api
 
+RUBY VERSION
+   ruby 2.4.0p0
+
 BUNDLED WITH
-   1.14.3
+   1.15.3
