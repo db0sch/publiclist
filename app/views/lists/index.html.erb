@@ -7,35 +7,30 @@
   </div>
 </section>
 
-<section id="lists">
-  <% if @lists.any? %>
-      <h1>Shared lists</h1>
-      <ol class="lists">
-        <% @lists.each do |list| %>
-          <li class="list">
-            <div class="list-left-body">
-              <span class="list-title"><%= list.title %></span>
+<% if @lists.any? %>
+    <h1>Shared lists</h1>
+    <ol class="lists">
+      <% @lists.each do |list| %>
+        <li class="list">
+          <div class="list-left-body">
+            <span class="list-title"><%= list.title %></span>
+          </div>
+          <div class="list-center-body">
+            <div class="list-link">
+              <span class="annotation">Shareable link: </span>
+              <code class="link"><%= list.short_link %></code>
             </div>
-            <div class="list-center-body">
-              <div class="list-link">
-                <span class="annotation">Shareable link: </span>
-                <code class="link"><%= list.short_link %></code>
-              </div>
-            </div>
-            <div class="list-right-body">
-              <%= link_to "Disable", list_path(list), method: :delete, class: "btn" %>
-            </div>
-          </li>
-        <% end %>
-      </ol>
-  <% else %>
-    <div class="paragraph-center">
-      <article class="text-center">
-        <p class="annotation">No shared list yet.</p>
-      </article>
-    </div>
-  <% end %>
-
-</section>
+          </div>
+          <div class="list-right-body">
+            <%= link_to "Disable", list_path(list), method: :delete, class: "btn" %>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+<% else %>
+    <article class="text-center">
+      <p class="annotation">No shared list yet.</p>
+    </article>
+<% end %>
 
 
