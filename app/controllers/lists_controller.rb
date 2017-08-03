@@ -3,6 +3,7 @@ class ListsController < ApplicationController
   def index
     @lists = current_user.lists
     @lists_wunderlist = @wunderlist.fetch
+    clean @lists_wunderlist, @lists
     @list = List.new
   end
 
@@ -12,10 +13,12 @@ class ListsController < ApplicationController
     @list.title = list_details.title
     @list.user = current_user
     if @list.save
+      ShortLinkService.new(@list).generate
       redirect_to lists_path
     else
       @lists = current_user.lists
       @lists_wunderlist = @wunderlist.fetch
+      clean @lists_wunderlist, @lists
       render :index
     end
   end
@@ -36,5 +39,11 @@ class ListsController < ApplicationController
 
   def wunderlist_lists
     @wunderlist = ListsFromWunderlistService.new(current_user)
+  end
+
+  def clean(wlist, shared_lists)
+    wlist.delete_if do |list|
+      shared_lists.any? {|l| l.list_id == list.id}
+    end
   end
 end

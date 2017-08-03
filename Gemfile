@@ -43,6 +43,8 @@ gem 'omniauth-wunderlist'
 gem 'wunderlist-api'
 # Use Auto link to create link with URL extracts from String
 gem "rinku"
+# Use Bitly for short link generation
+gem "bitly"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
