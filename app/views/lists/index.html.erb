@@ -8,26 +8,33 @@
 </section>
 
 <section id="lists">
-  <div class="container">
-    <h1>Shared lists</h1>
-
-    <ol class="lists">
-      <% @lists.each do |list| %>
-        <li class="list">
-          <div class="list-left-body">
-            <span><%= list.title %></span>
-            <div class="list-link">
-              <span>Link: </span><code><%= list.short_link %></code>
+  <% if @lists.any? %>
+    <div class="container">
+      <h1>Shared lists</h1>
+      <ol class="lists">
+        <% @lists.each do |list| %>
+          <li class="list">
+            <div class="list-left-body">
+              <span><%= list.title %></span>
+              <div class="list-link">
+                <span>Link: </span><code><%= list.short_link %></code>
+              </div>
             </div>
-          </div>
-          <div class="list-right-body">
-            <%= link_to "Disable", list_path(list), method: :delete, class: "btn" %>
-          </div>
-        </li>
-      <% end %>
-    </ol>
+            <div class="list-right-body">
+              <%= link_to "Disable", list_path(list), method: :delete, class: "btn" %>
+            </div>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  <% else %>
+    <div class="paragraph-center">
+      <article class="text-center">
+        <p class="annotation">No shared list yet.</p>
+      </article>
+    </div>
+  <% end %>
 
-  </div>
 </section>
 
 
