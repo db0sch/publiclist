@@ -4,7 +4,7 @@
       <span id="navbarLogo">MNMLIST</span>
       <% if signed_in? %>
         <ul class="list-unstyled list-inline">
-          <li>Settings</li>
+          <!-- <li>Settings</li> -->
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         </ul>
       <% end %>

@@ -9,15 +9,17 @@
 
 <section id="lists">
   <% if @lists.any? %>
-    <div class="container">
       <h1>Shared lists</h1>
       <ol class="lists">
         <% @lists.each do |list| %>
           <li class="list">
             <div class="list-left-body">
-              <span><%= list.title %></span>
+              <span class="list-title"><%= list.title %></span>
+            </div>
+            <div class="list-center-body">
               <div class="list-link">
-                <span>Link: </span><code><%= list.short_link %></code>
+                <span class="annotation">Shareable link: </span>
+                <code class="link"><%= list.short_link %></code>
               </div>
             </div>
             <div class="list-right-body">
@@ -26,7 +28,6 @@
           </li>
         <% end %>
       </ol>
-    </div>
   <% else %>
     <div class="paragraph-center">
       <article class="text-center">
