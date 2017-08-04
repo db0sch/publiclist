@@ -1,5 +1,5 @@
 meta_product_name: "MNMLIST"
 meta_title: "MNMLIST - Share your (Wunder)lists with anyone"
 meta_description: "Share your lists in Wunderlist with your friends and community"
-meta_image: "color_logo.png"   # should exist in `app/assets/images/`
+meta_image: "mnmlist_logo.png"   # should exist in `app/assets/images/`
 twitter_account: "@mnmlist_"   # required for Twitter Cards
